@@ -1,0 +1,57 @@
+body{
+    margin:auto;
+}
+.socialbar {
+    width: 100%;
+background: linear-gradient(to bottom, #62656E 0%, #AAB3C0 50%, #62656E 100%);
+    border: 1px solid black;
+    height:50px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    align-content: flex-end;
+   
+}
+.steam {
+    height:48px;
+    width: 48px;
+}
+.socialcontainer{
+    display: flex;
+    width:200px;
+    justify-content: space-evenly;
+    float: right;
+    padding-right: 5px;
+}
+
+.videocontainer {
+    position:relative;
+    border:2px solid black;
+    background-color:black;
+    width: 100%;
+    height: 100%;
+}
+.videocontainer video {
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+    position: relative;
+}
+#socialicon:hover{
+    opacity: 25%;
+}
+
+.overlay {
+    color: 	#8B0000;
+    position:absolute;
+    text-align: center;
+    z-index:1;
+    top:50%;
+    left:25%;
+    line-height: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.gametitle {
+    font-size: 72px;
+    padding-bottom:15px;
+}
