@@ -3,7 +3,7 @@ body{
 }
 .socialbar {
     width: 100%;
-background: linear-gradient(to bottom, #62656E 0%, #AAB3C0 50%, #62656E 100%);
+    background:#333;
     border: 1px solid black;
     height:50px;
     padding-top:5px;
