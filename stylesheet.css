@@ -1,5 +1,7 @@
 body{
     margin:auto;
+    width: 100%;
+    background-color: #333;
 }
 .socialbar {
     width: 100%;
@@ -25,7 +27,6 @@ body{
 
 .videocontainer {
     position:relative;
-    border:2px solid black;
     background-color:black;
     width: 100%;
     height: 100%;
@@ -33,7 +34,7 @@ body{
 .videocontainer video {
     width: 100%;
     height: 100%;
-    opacity: 40%;
+    opacity: 25%;
     position: relative;
 }
 #socialicon:hover{
@@ -45,13 +46,27 @@ body{
     position:absolute;
     text-align: center;
     z-index:1;
-    top:50%;
-    left:25%;
+    top:35%;
+    left:35%;
     line-height: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .gametitle {
     font-size: 72px;
-    padding-bottom:15px;
+    padding-bottom:40px;
+}
+.gamedetail {
+    font-size: 24px;
+    overflow-wrap: break-word;
+}
+
+.divider {
+    
+}
+.miniinfo {
+    display:flex;
+}
+.gif {
+    margin:auto;
 }
