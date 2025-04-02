@@ -102,10 +102,29 @@ body{
     width: 33.3333%;
     padding:0;
     margin:0;
+    position:relative;
+    text-align: center;
 }
 .gif img {
     width:100%;
     height:auto;
+    display:block;
+    transition: opacity 0.3s ease;
+}
+.gif-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: DeadWalk;
+    font-size: 24px;
+    color: #C70039;
+    display: none;
+}
+.gif:hover img {
+    opacity:0;
+}
+.gif:hover .gif-text {
     display:block;
 }
 .steampage {
@@ -124,15 +143,4 @@ body{
 }
 .steampage:hover {
     opacity:50%;
-}
-.collecttext {
-    
-    color:snow;
-}
-.collect:hover{
-    opacity:0%;
-}
-.collect:hover + .collecttext {
-display:block;
-
 }
