@@ -1,17 +1,25 @@
-body{
-    margin:auto;
+@font-face { font-family: DeadWalk; src:url('Assets/DeadFontWalking-X2Ka.ttf');}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     width: 100%;
-    background-color: #333;
+}
+a {
+    text-decoration: none;
+    color:#C70039;
+}
+body{
+    background-color: rgba(42, 62, 51, 1);
+    
 }
 .socialbar {
-    width: 100%;
-    background:#333;
-    border: 1px solid black;
     height:50px;
-    padding-top:5px;
-    padding-bottom: 5px;
-    align-content: flex-end;
-   
+    padding:10px;
+    align-items:center;
+    display: flex;
+    justify-content: flex-end;
 }
 .steam {
     height:48px;
@@ -19,54 +27,101 @@ body{
 }
 .socialcontainer{
     display: flex;
-    width:200px;
-    justify-content: space-evenly;
-    float: right;
-    padding-right: 5px;
+    gap: 10px;
 }
 
 .videocontainer {
     position:relative;
     background-color:black;
-    width: 100%;
-    height: 100%;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
 }
 .videocontainer video {
     width: 100%;
     height: 100%;
     opacity: 25%;
     position: relative;
+    object-fit: cover;
+    display:block;
 }
 #socialicon:hover{
     opacity: 25%;
 }
 
 .overlay {
-    color: 	#8B0000;
-    position:absolute;
+    color: 	#C70039;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    z-index:1;
-    top:35%;
-    left:35%;
+    z-index: 1;
+    color: #C70039;
+    font-family: DeadWalk;
     line-height: 50px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
+.wrapper {
+    color: 	#C70039;
+    position:absolute;
+    z-index:1;
+    top:75%;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 50px;
+    font-family: DeadWalk;
+    font-size: 24px;
+}
 .gametitle {
     font-size: 72px;
     padding-bottom:40px;
-}
-.gamedetail {
-    font-size: 24px;
-    overflow-wrap: break-word;
+    letter-spacing: 8px;
+    text-shadow: 2px 2px 5px #C70039;
+    -webkit-box-reflect: below -70px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+
 }
 
-.divider {
+.gamedetail {
+    padding-top:35px;
+    font-size: 24px;
     
 }
+
 .miniinfo {
     display:flex;
+    width:100%;
+    padding:0;
+    margin:0;
 }
 .gif {
-    margin:auto;
+    width: 33.3333%;
+    padding:0;
+    margin:0;
+}
+.gif img {
+    width:100%;
+    height:auto;
+    display:block;
+}
+.steampage {
+    -webkit-border-radius: 11;
+    -moz-border-radius: 11;
+    border-radius: 11px;
+    -webkit-box-shadow: 0px 6px 5px #696969;
+    -moz-box-shadow: 0px 6px 5px #696969;
+    box-shadow: 0px 6px 5px #696969;
+    color: #C70039;
+    font-family: DeadWalk;
+  font-size: 20px;
+  background: rgba(42, 62, 51, 1);
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+.steampage:hover {
+    opacity:50%;
+}
+
+.collect:hover {
+    
 }
