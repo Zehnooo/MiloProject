@@ -19,7 +19,11 @@ body{
     padding:10px;
     align-items:center;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+.gamestatus {
+    color: #C70039;
+    font-family: DeadWalk;
 }
 .steam {
     height:48px;
@@ -28,6 +32,7 @@ body{
 .socialcontainer{
     display: flex;
     gap: 10px;
+    
 }
 
 .videocontainer {
@@ -50,7 +55,6 @@ body{
 }
 
 .overlay {
-    color: 	#C70039;
     position: absolute;
     top: 15%;
     left: 50%;
@@ -123,5 +127,5 @@ body{
 }
 
 .collect:hover {
-    
+
 }
