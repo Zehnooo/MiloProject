@@ -125,7 +125,14 @@ body{
 .steampage:hover {
     opacity:50%;
 }
-
-.collect:hover {
+.collecttext {
+    
+    color:snow;
+}
+.collect:hover{
+    opacity:0%;
+}
+.collect:hover + .collecttext {
+display:block;
 
 }
