@@ -1,5 +1,7 @@
 @font-face { font-family: DeadWalk; src:url('Assets/DeadFontWalking-X2Ka.ttf');}
-
+*{
+    margin:0;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -8,22 +10,73 @@ html, body {
 }
 a {
     text-decoration: none;
-    color:#C70039;
+    color:#be3144;
 }
 body{
     background-color: rgba(42, 62, 51, 1);
     
 }
 .socialbar {
-    height:50px;
+    height:auto;
     padding:10px;
     align-items:center;
     display: flex;
     justify-content: space-between;
+    background-color:#3a4750;
+    border: 2px solid#303841;
+    
 }
 .gamestatus {
-    color: #C70039;
+    width: 100%;
+    overflow:hidden;
+    white-space: nowrap;
     font-family: DeadWalk;
+    font-size: 48px;
+    color: #be3144;
+    height: 48px;
+    position: relative;
+    margin-right:25px;
+}
+
+.scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+    white-space: nowrap;
+    
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes marquee2 {
+    0% { opacity: 100%; }
+    5% { opacity: 50%; }
+    10% { opacity: 0%; }
+    15% { opacity: 50%; }
+    20% { opacity: 100%; }
+    25% { opacity: 50%; }
+    30% { opacity: 0%; }
+    35% { opacity: 50%; }
+    40% { opacity: 100%; }
+    45% { opacity: 50%; }
+    50% { opacity: 0%; }
+    55% { opacity: 50%; }
+    60% { opacity: 100%; }
+    65% { opacity: 50%; }
+    70% { opacity: 0%; }
+    75% { opacity: 50%; }
+    80% { opacity: 100%; }
+    85% { opacity: 50%; }
+    90% { opacity: 0%; }
+    95% { opacity: 50%; }
+    100% { opacity: 100%; }
 }
 .steam {
     height:48px;
@@ -32,7 +85,6 @@ body{
 .socialcontainer{
     display: flex;
     gap: 10px;
-    
 }
 
 .videocontainer {
@@ -61,12 +113,12 @@ body{
     transform: translateX(-50%);
     text-align: center;
     z-index: 1;
-    color: #C70039;
+    color: #be3144;
     font-family: DeadWalk;
     line-height: 50px;
 }
 .wrapper {
-    color: 	#C70039;
+    color: 	#be3144;
     position:absolute;
     z-index:1;
     top:75%;
@@ -81,7 +133,7 @@ body{
     font-size: 72px;
     padding-bottom:40px;
     letter-spacing: 8px;
-    text-shadow: 2px 2px 5px #C70039;
+    text-shadow: 2px 2px 5px #be3144;
     -webkit-box-reflect: below -70px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
 
 }
@@ -118,7 +170,7 @@ body{
     transform: translate(-50%, -50%);
     font-family: DeadWalk;
     font-size: 24px;
-    color: #C70039;
+    color: #be3144;
     display: none;
 }
 .gif:hover img {
@@ -134,13 +186,26 @@ body{
     -webkit-box-shadow: 0px 6px 5px #696969;
     -moz-box-shadow: 0px 6px 5px #696969;
     box-shadow: 0px 6px 5px #696969;
-    color: #C70039;
+    color: #be3144;
     font-family: DeadWalk;
-  font-size: 20px;
-  background: rgba(42, 62, 51, 1);
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
+    font-size: 20px;
+    background: rgba(42, 62, 51, 1);
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    animation-name: wiggle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
 }
 .steampage:hover {
-    opacity:50%;
+    opacity:75%;
+    animation-play-state:paused;
+}
+@keyframes wiggle {
+    0% {}
+    25% {}
+    50% {scale:1.25;}
+    75% {}
+    100%{}
 }
