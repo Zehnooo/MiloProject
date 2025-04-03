@@ -73,30 +73,6 @@ body{
         transform: translateX(0%); opacity:100%;
     }
 }
-
-@keyframes marquee2 {
-    0% { opacity: 100%; }
-    5% { opacity: 50%; }
-    10% { opacity: 0%; }
-    15% { opacity: 50%; }
-    20% { opacity: 100%; }
-    25% { opacity: 50%; }
-    30% { opacity: 0%; }
-    35% { opacity: 50%; }
-    40% { opacity: 100%; }
-    45% { opacity: 50%; }
-    50% { opacity: 0%; }
-    55% { opacity: 50%; }
-    60% { opacity: 100%; }
-    65% { opacity: 50%; }
-    70% { opacity: 0%; }
-    75% { opacity: 50%; }
-    80% { opacity: 100%; }
-    85% { opacity: 50%; }
-    90% { opacity: 0%; }
-    95% { opacity: 50%; }
-    100% { opacity: 100%; }
-}
 .steam {
     height:48px;
     width: 48px;
@@ -121,8 +97,25 @@ body{
     object-fit: cover;
     display:block;
 }
+#socialicon{
+    transition: transform 0.3s ease-out;
+    color:transparent;
+
+}
 #socialicon:hover{
     opacity: 25%;
+    transform: scale(1.25);
+    animation: iconload 15s linear infinite;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(102deg) brightness(106%) contrast(101%);
+   
+}
+
+@keyframes iconload {
+    0%{}
+    25%{}
+    50%{}
+    75%{}
+    100%{}
 }
 
 .overlay {
@@ -215,7 +208,6 @@ body{
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-
 }
 .steampage:hover {
     opacity:75%;
@@ -230,3 +222,4 @@ body{
     85%{rotate:5deg;}
     100%{rotate:-5deg;}
 }
+
