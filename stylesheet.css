@@ -150,21 +150,10 @@ body{
     display:block;
     transition: opacity 0.3s ease;
 }
-.gif-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: DeadWalk;
-    font-size: 24px;
-    color: #be3144;
-    display: none;
-}
 .gif:hover img {
-    opacity:25%;
-}
-.gif:hover .gif-text {
-    display:block;
+    scale:2;
+    border:2px solid snow;
+    position:absolute;
 }
 .steampage {
     -webkit-border-radius: 11;
@@ -210,13 +199,13 @@ body{
     margin: 75px;
     
   }
-  .faq-question {
+  .faq-question, .fa-ellipsis-h {
     width: 100%;
     background: none;
     color: #be3144;
     font-family: DeadWalk;
     font-size: 28px;
-    padding: 20px;
+    padding-top:20px;
     text-align: center;
     cursor: pointer;
     border: none;
@@ -236,4 +225,7 @@ body{
   }
   .hidden {
     display: none;
+  }
+  .contentdivider{
+    padding:30px;
   }
