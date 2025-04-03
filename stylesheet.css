@@ -8,7 +8,7 @@ html, body {
     overflow-x: hidden;
     width: 100%;
 }
-a {
+.wrapper {
     text-decoration: none;
     color:#be3144;
 }
@@ -99,7 +99,7 @@ body{
 }
 #socialicon{
     transition: transform 0.3s ease-out;
-    color:transparent;
+    color:#303841;
 
 }
 #socialicon:hover{
@@ -201,7 +201,7 @@ body{
     color: #be3144;
     font-family: DeadWalk;
     font-size: 20px;
-    background: rgba(42, 62, 51, 1);
+    background: #3a4750;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     animation-name: wiggle;
