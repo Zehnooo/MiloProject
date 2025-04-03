@@ -23,7 +23,7 @@ body{
     display: flex;
     justify-content: space-between;
     background-color:#3a4750;
-    border: 2px solid#303841;
+    border: 2px inset #303841;
     
 }
 .gamestatus {
@@ -48,10 +48,29 @@ body{
 
 @keyframes marquee {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); opacity:100%;
     }
+    5% { opacity: 50%; }
+    10% { opacity: 0%; }
+    15% { opacity: 50%; }
+    20% { opacity: 100%; }
+    25% { opacity: 50%; }
+    30% { opacity: 0%; }
+    35% { opacity: 50%; }
+    40% { opacity: 100%; }
+    45% { opacity: 50%; }
+    50% { opacity: 0%; }
+    55% { opacity: 50%; }
+    60% { opacity: 100%; }
+    65% { opacity: 50%; }
+    70% { opacity: 0%; }
+    75% { opacity: 50%; }
+    80% { opacity: 100%; }
+    85% { opacity: 50%; }
+    90% { opacity: 0%; }
+    95% { opacity: 50%; }
     100% {
-        transform: translateX(0%);
+        transform: translateX(0%); opacity:100%;
     }
 }
 
