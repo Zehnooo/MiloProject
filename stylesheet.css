@@ -13,7 +13,7 @@ html, body {
     color:#be3144;
 }
 body{
-    background-color: rgba(42, 62, 51, 1);
+    background-color: #3a4750;
     
 }
 .socialbar {
@@ -198,3 +198,37 @@ body{
     100%{rotate:-5deg;}
 }
 
+.faq-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 40px auto;
+    max-width: 800px;
+  }
+.faq-item {
+    margin-bottom: 20px;
+    background-color: #3a4750;
+    border-radius: 8px;
+    overflow: hidden;
+    border-bottom: 2px solid #303841;
+  }
+  .faq-question {
+    width: 100%;
+    background: none;
+    color: #be3144;
+    
+    font-family: DeadWalk;
+    font-size: 24px;
+    padding: 20px;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  .faq-answer {
+    display: none;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #2a3e33;
+    font-family: sans-serif;
+  }

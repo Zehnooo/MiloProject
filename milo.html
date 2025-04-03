@@ -75,22 +75,78 @@
     <div class="contentdivider"></div>
     <div class="gameinfo">
       <div>
-        <ul>
-          Why Early Access?
+        <ul class="faq-list">
+          <li class="faq-item">
+            <button class="faq-question">Why Early Access?</button>
+            <div class="faq-answer">
+              “I want to introduce more ways to customize your character and
+              rats (gameplay-wise and cosmetically) as well as create more
+              abilities, power-ups, synergies, and passives that augment each
+              play-through. I also want to add maps, additional weapons and
+              possibly player classes, skill-unlocked cosmetic items/skins,
+              online co-op.”
+            </div>
+          </li>
+          <li class="faq-list">
+            <button class="faq-question">
+              Approximately how long will this game be in Early Access?
+            </button>
+            <div class="faq-answer">
+              “My plan is to remain in Early Access for approximately one year
+              after launch.”
+            </div>
+          </li>
+          <li class="faq-list">
+            <button class="faq-question">
+              How is the full version planned to differ from the Early Access
+              version?
+            </button>
+            <div class="faq-answer">
+              My goal is that the full version will contain a substantial amount
+              of more maps, gameplay variety, replayability,
+              items/power-ups/synergies, quality-of-life improvements, and
+              graphical/performance improvements.
+            </div>
+          </li>
+          <li class="faq-list">
+            <button class="faq-question">
+              What is the current state of the Early Access version?
+            </button>
+            <div class="faq-answer">
+              The essential gameplay loop of Milo and the artistic/atmospheric
+              elements of the game are already present.
+            </div>
+          </li>
+          <li class="faq-list">
+            <button class="faq-question">
+              Will the game be priced differently during and after Early Access?
+            </button>
+            <div class="faq-answer">
+              I do plan to raise the price when leaving Early Access, and
+              possibly for DLC expansions.
+            </div>
+          </li>
+          <li class="faq-list">
+            <button class="faq-question">
+              How are you planning on involving the Community in your
+              development process?
+            </button>
+            <div class="faq-answer">
+              I currently host a Discord server where players can file bug
+              reports and offer feedback and suggestions.
+            </div>
+          </li>
         </ul>
-        <div class="a1">
-          “I want to introduce more ways to customize your character and rats
-          (gameplay-wise and cosmetically) as well as create more abilities,
-          power-ups, synergies, and passives that augment each play-through. I
-          also want to add maps, additional weapons and and possibly player
-          classes, skill-unlocked cosmetic items/skins, online co-op)”
-        </div>
       </div>
-      <ul></ul>
-      <ul></ul>
-      <ul></ul>
-      <ul></ul>
-      <ul></ul>
     </div>
+    <script>
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const answer = button.nextElementSibling;
+          answer.style.display =
+            answer.style.display === "block" ? "none" : "block";
+        });
+      });
+    </script>
   </body>
 </html>
