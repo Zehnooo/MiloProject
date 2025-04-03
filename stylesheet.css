@@ -201,34 +201,39 @@ body{
 .faq-list {
     list-style-type: none;
     padding: 0;
-    margin: 40px auto;
-    max-width: 800px;
+    background-color: rgba(48, 56, 65, .75)
   }
 .faq-item {
     margin-bottom: 20px;
-    background-color: #3a4750;
     border-radius: 8px;
     overflow: hidden;
-    border-bottom: 2px solid #303841;
+    margin: 75px;
+    
   }
   .faq-question {
     width: 100%;
     background: none;
     color: #be3144;
-    
     font-family: DeadWalk;
-    font-size: 24px;
+    font-size: 28px;
     padding: 20px;
-    text-align: left;
+    text-align: center;
     cursor: pointer;
     border: none;
     outline: none;
   }
+
   .faq-answer {
-    display: none;
+    display: block;
     padding: 20px;
     color: #ffffff;
     font-size: 18px;
-    background-color: #2a3e33;
     font-family: sans-serif;
+    border-bottom: 2px groove rgba(48, 56, 65, 1);
+    text-align:center;
+    font-style: italic;
+    opacity: 65%;
+  }
+  .hidden {
+    display: none;
   }
