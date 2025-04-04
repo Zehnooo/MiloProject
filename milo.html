@@ -27,7 +27,7 @@
     <div class="socialbar">
       <div class="gamestatus fa-fade">
         <div class="scrolling-text">
-          Coming Soon to Early Access - Coming Soon to Early Access
+          Demo Available on Steam! - Coming Soon to Early Access
         </div>
       </div>
       <div class="socialcontainer">
@@ -54,8 +54,8 @@
       <div class="videocontainer">
         <video src="Assets/introfootage.webm" autoplay loop muted></video>
         <div class="overlay">
-          <div class="gametitle">MILO</div>
-          <div class="gamedetail">
+          <div class="gametitle landing">MILO</div>
+          <div class="gamedetail landing">
             Survive in this Horde-Shooter set in a World War 2 post-apocalypse
             controlled by Milo, the leader of an absurd nightmare cult that
             worships a mysterious beverage.
@@ -73,12 +73,15 @@
     <div class="miniinfo">
       <div class="gif">
         <img class="collect" src="Assets\COLLECT_GIF_NEW.gif" />
+        <div class="mechanic-info">COLLECT PLACEHOLDER</div>
       </div>
       <div class="gif">
         <img class="upgrade" src="Assets\DRINKUPGRADE_GIF.gif" />
+        <div class="mechanic-info">UPGRADE PLACEHOLDER</div>
       </div>
       <div class="gif">
         <img class="play" src="Assets/PLAY_GIF_REDUX.gif" />
+        <div class="mechanic-info">PLAY PLACEHOLDER</div>
       </div>
     </div>
     <div class="contentdivider"></div>
@@ -113,11 +116,12 @@
           </li>
           <!--FAQ ITEM 3-->
           <li class="faq-item">
-            <button class="faq-question">
+            <div class="faq-question" onclick="toggleFaq('faq-early-access2')">
               How is the full version planned to differ from the Early Access
               version?
-            </button>
-            <div class="faq-answer">
+              <i class="fa-solid fa-ellipsis-h"></i>
+            </div>
+            <div class="faq-answer hidden" id="faq-early-access2">
               My goal is that the full version will contain a substantial amount
               of more maps, gameplay variety, replayability,
               items/power-ups/synergies, quality-of-life improvements, and

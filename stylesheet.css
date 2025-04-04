@@ -41,12 +41,12 @@ body{
 .scrolling-text {
     display: inline-block;
     padding-left: 100%;
-    animation: marquee 15s linear infinite;
+    animation: slide 12s linear infinite;
     white-space: nowrap;
-    
+    animation-delay: 5s;
 }
 
-@keyframes marquee {
+@keyframes slide {
     0% {
         transform: translateX(-100%);
     }
@@ -114,21 +114,32 @@ body{
     text-align: center;
     line-height: 50px;
     font-family: DeadWalk;
-    font-size: 24px;
 }
 .gametitle {
-    font-size: 96px;
+    font-size: 128px;
     padding-bottom:40px;
     letter-spacing: 8px;
     text-shadow: 2px 2px 5px #be3144;
     -webkit-box-reflect: below -55px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
-
 }
-
 .gamedetail {
     margin-top:25%;
     font-size: 36px;
-    
+}
+
+.landing {
+    animation-name: landing;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: none;
+}
+
+@keyframes landing {
+    0%{transform: translateX(-100%);}
+    25%{}
+    50%{transform: translateX(20%)}
+    100%{transform: translateX(0%);}
 }
 
 .miniinfo {
@@ -151,11 +162,24 @@ body{
     transition: opacity 0.3s ease;
 }
 .gif:hover img {
-    scale:2;
-    border:2px solid snow;
-    position:absolute;
+    opacity: 50%;
+}
+.gif:hover .mechanic-info{
+    display:block;
+    position: absolute;
+}
+.mechanic-info {
+    color:#be3144;
+    font-family:DeadWalk;
+    display: none;
+    z-index:1;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
 }
 .steampage {
+    opacity: 0%;
     -webkit-border-radius: 11;
     -moz-border-radius: 11;
     border-radius: 11px;
@@ -168,24 +192,28 @@ body{
     background: #3a4750;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
-    animation-name: wiggle;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: floatin 1s ease-out forwards,
+    wiggle 2s linear infinite;
+    animation-delay:2s;
 }
 .steampage:hover {
     opacity:75%;
     animation-play-state:paused;
 }
+@keyframes floatin {
+    0%{transform: translateY(100%);opacity:0;}
+    100%{transform:translateY(0%);opacity:1;}
+}
 @keyframes wiggle {
-    0% {rotate:-5deg}
-    15%{rotate:5deg}
+    0% {rotate:0deg;}
+    15%{rotate:5deg;}
     25% {rotate:-5deg;scale:1.25;}
     50% {rotate:5deg;scale:1.5;}
     75% {rotate:-5deg;scale:1.25;}
     85%{rotate:5deg;}
     100%{rotate:-5deg;}
 }
+
 
 .faq-list {
     list-style-type: none;
