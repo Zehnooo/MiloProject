@@ -199,6 +199,7 @@ body{
 .steampage:hover {
     opacity:75%;
     animation-play-state:paused;
+    border: 3px inset #3a4750;
 }
 @keyframes floatin {
     0%{transform: translateY(100%);opacity:0;}
@@ -217,17 +218,19 @@ body{
 
 .faq-list {
     list-style-type: none;
-    padding: 0;
-    background-color: rgba(48, 56, 65, .75)
-  }
-.faq-item {
-    margin-bottom: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 75px;
+    padding: 20px;
+    background-color: rgba(48, 56, 65, .5);
     
   }
-  .faq-question, .fa-ellipsis-h {
+.faq-item {
+    padding:20px;
+    margin:30px auto;
+    max-width:800px;
+    
+  }
+  .faq-question, .fa-ellipsis-h, .faq-header {
+    display:inline-block;
+    margin: 0 auto;
     width: 100%;
     background: none;
     color: #be3144;
@@ -236,8 +239,12 @@ body{
     padding-top:20px;
     text-align: center;
     cursor: pointer;
-    border: none;
     outline: none;
+    padding-bottom:25px;
+  }
+  .faq-question {
+    border: 8px outset #3a4750;
+    box-shadow: 10px 10px 8px black;
   }
 
   .faq-answer {
@@ -246,7 +253,7 @@ body{
     color: #ffffff;
     font-size: 18px;
     font-family: sans-serif;
-    border-bottom: 2px groove rgba(48, 56, 65, 1);
+    border: 4px inset #3a4750;
     text-align:center;
     font-style: italic;
     opacity: 65%;
@@ -257,3 +264,43 @@ body{
   .contentdivider{
     padding:30px;
   }
+
+  .fa-ellipsis-h {
+    opacity:75%;
+    color:#be3144;
+  }
+  .fa-xmark {
+    padding-left:50px;
+    padding-right:50px;
+    opacity:0%;
+  }
+  .faq-header {
+    text-align: center;
+    margin:auto;
+    cursor:default;
+    border: 6px outset #3a4750;
+    box-shadow: 10px 10px 8px black;
+  }
+  .header-text {
+    letter-spacing: 10px;
+
+  }
+  .faq-headline {
+    width:80%;
+    margin:10px auto;
+    border:5px outset snow;
+    opacity: .5;
+    margin-top:25px;
+  }
+  .trailer-container {
+    display:flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+  iframe {
+    border: 10px outset #303841;
+    width:720px;
+    height:360px;
+  }
+
+  

@@ -27,7 +27,8 @@
     <div class="socialbar">
       <div class="gamestatus fa-fade">
         <div class="scrolling-text">
-          Demo Available on Steam! - Coming Soon to Early Access
+          Demo Available on Steam Now! <i class="fa-solid fa-xmark"></i> Coming
+          Soon to Early Access
         </div>
       </div>
       <div class="socialcontainer">
@@ -45,6 +46,23 @@
               class="fa-brands fa-steam-symbol fa-3x fa-beat"
               id="socialicon"
             ></i
+          ></a>
+        </div>
+        <div>
+          <a
+            href="https://www.patreon.com/profile/creators?u=7659520"
+            target="_blank"
+            ><i class="fa-brands fa-patreon fa-3x fa-beat" id="socialicon"></i
+          ></a>
+        </div>
+        <div>
+          <a href="https://x.com/ammotubes" target="_blank"
+            ><i class="fa-brands fa-x-twitter fa-3x fa-beat" id="socialicon"></i
+          ></a>
+        </div>
+        <div>
+          <a href="https://www.twitch.tv/ammoburger" target="_blank"
+            ><i class="fa-brands fa-twitch fa-3x fa-beat" id="socialicon"></i
           ></a>
         </div>
       </div>
@@ -85,9 +103,15 @@
       </div>
     </div>
     <div class="contentdivider"></div>
-    <div class="gameinfo">
-      <div>
+    <div class="trailer-container">
+    <iframe src="https://www.youtube.com/embed/1kuBu4A52y0?si=_HDf3vDzWLCTFzXn&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+    <div class="contentdivider"></div>
         <ul class="faq-list">
+          <div class="faq-header">
+            <h1 class="header-text">DEVELOPER FAQ</h1>
+            <hr class="faq-headline" />
+          </div>
           <!--FAQ ITEM 1-->
           <li class="faq-item">
             <div class="faq-question" onclick="toggleFaq('faq-early-access')">
@@ -130,37 +154,39 @@
           </li>
           <!--FAQ ITEM 4-->
           <li class="faq-item">
-            <button class="faq-question">
+            <div class="faq-question" onclick="toggleFaq('faq-early-access3')">
               What is the current state of the Early Access version?
-            </button>
-            <div class="faq-answer">
+              <i class="fa-solid fa-ellipsis-h"></i>
+            </div>
+            <div class="faq-answer hidden" id="faq-early-access3">
               The essential gameplay loop of Milo and the artistic/atmospheric
               elements of the game are already present.
             </div>
           </li>
           <!--FAQ ITEM 5-->
           <li class="faq-item">
-            <button class="faq-question">
+            <div class="faq-question" onclick="toggleFaq('faq-early-access4')">
               Will the game be priced differently during and after Early Access?
-            </button>
-            <div class="faq-answer">
+              <i class="fa-solid fa-ellipsis-h"></i>
+            </div>
+            <div class="faq-answer hidden" id="faq-early-access4">
               I do plan to raise the price when leaving Early Access, and
               possibly for DLC expansions.
             </div>
           </li>
           <!--FAQ ITEM 6-->
           <li class="faq-item">
-            <button class="faq-question">
+            <div class="faq-question" onclick="toggleFaq('faq-early-access5')">
               How are you planning on involving the Community in your
               development process?
-            </button>
-            <div class="faq-answer">
+              <i class="fa-solid fa-ellipsis-h"></i>
+            </div>
+            <div class="faq-answer hidden" id="faq-early-access5">
               I currently host a Discord server where players can file bug
               reports and offer feedback and suggestions.
             </div>
           </li>
         </ul>
       </div>
-    </div>
   </body>
 </html>
