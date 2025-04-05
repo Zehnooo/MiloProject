@@ -52,7 +52,7 @@ body{
     padding-left: 100%;
     animation: slide 12s linear infinite;
     white-space: nowrap;
-    animation-delay: 5s;
+    animation-delay: 2s;
 }
 
 @keyframes slide {
@@ -185,6 +185,7 @@ body{
     height:auto;
     display:block;
     transition: opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Small shadow under the image */
 }
 .gif:hover img {
     opacity: 50%;
@@ -225,6 +226,8 @@ body{
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
   transition: ease .3;
+  white-space: nowrap;
+  z-index: 1;
 }
 .steampage:after {
     position: absolute;
@@ -352,3 +355,14 @@ hr.divider {
         inset 0 -30px 60px 10px rgba(255, 255, 255, 0.3), 
         inset 0 10px 20px rgba(0, 0, 0, 0.5);          
 }
+.content-info:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  }
+  @media (max-width: 768px) {
+    .game-content-info {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  }
