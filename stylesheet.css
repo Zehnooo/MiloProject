@@ -4,6 +4,7 @@
     --secondary-color: #97b1aa;
     --text-color: #be3144;
     --border-color: #97b1aa;
+    /* background gradient is radial, #406B61, #284942, #1F342D */
 }
 *{
     margin:0;
@@ -311,12 +312,24 @@ hr.page-margin {
     margin: 25px auto;
     
 }
+hr.page-margin:after, hr.divider:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
+}
+
+hr.divider {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+    width:75%;
+    margin: auto;
+    margin-bottom:50px;
+}
 .game-content-info {
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     grid-template-rows: repeat(2, minmax(200px, 1fr));
     gap: 2rem;
-    padding: 2rem;
+    padding: 4rem;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -336,6 +349,6 @@ hr.page-margin {
   min-height: 250px;
   box-sizing: border-box;
   box-shadow: 
-    inset -10px -10px 20px rgba(255, 255, 255, 0.25),
-    inset 10px 10px 30px rgba(0, 0, 0, 0.9);  
-  }
+        inset 0 -30px 60px 10px rgba(255, 255, 255, 0.3), 
+        inset 0 10px 20px rgba(0, 0, 0, 0.5);          
+}
