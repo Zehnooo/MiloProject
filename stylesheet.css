@@ -1,6 +1,13 @@
 @font-face { font-family: DeadWalk; src:url('Assets/DeadFontWalking-X2Ka.ttf');}
+:root {
+    --main-color:#39625A;
+    --secondary-color: #97b1aa;
+    --text-color: #be3144;
+    --border-color: #97b1aa;
+}
 *{
     margin:0;
+    
 }
 html, body {
     margin: 0;
@@ -10,11 +17,9 @@ html, body {
 }
 .wrapper {
     text-decoration: none;
-    color:#be3144;
 }
 body{
-    background-color: #3a4750;
-    
+    background-image: radial-gradient(circle, #406b61, #3b645b, #375e55, #325750, #2e514a, #2b4d45, #294841, #26443c, #244038, #233c34, #213831, #1f342d);
 }
 .socialbar {
     height:auto;
@@ -22,9 +27,10 @@ body{
     align-items:center;
     display: flex;
     justify-content: space-between;
-    background-color:#3a4750;
-    border: 2px inset #303841;
-    
+    border: 6px inset var(--border-color);
+    box-shadow: 
+    inset -10px -10px 20px rgba(255, 255, 255, 0.25), /* Faded white light in the top-left (inside) */
+    inset 10px 10px 30px rgba(0, 0, 0, 0.9);  
 }
 .gamestatus {
     width: 100%;
@@ -36,6 +42,8 @@ body{
     height: 48px;
     position: relative;
     margin-right:25px;
+    cursor:default;
+    user-select: none;
 }
 
 .scrolling-text {
@@ -72,59 +80,75 @@ body{
     overflow:hidden;
 }
 .videocontainer video {
+    width: 100vw;
+    height: 100vh;
+    opacity: 25%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.content-stack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    opacity: 25%;
-    position: relative;
-    object-fit: cover;
-    display:block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 #socialicon{
     transition: transform 0.3s ease-out;
-    color:#303841;
+    color:#97b1aa;
     padding:10px;
 
 }
 #socialicon:hover{
-    opacity: 25%;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(102deg) brightness(106%) contrast(101%);
+    opacity: 50%;
     animation-play-state: paused;
-   
 }
 
-
 .overlay {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 1;
+    position: static;
+    transform: none;
     color: #be3144;
     font-family: DeadWalk;
     line-height: 50px;
+    z-index: 1;
 }
+
 .wrapper {
-    color: 	#be3144;
-    position:absolute;
-    z-index:1;
-    top:75%;
-    left:50%;
-    transform: translateX(-50%);
-    text-align: center;
-    line-height: 50px;
+    position: static;
+    transform: none;
+    color: #be3144;
     font-family: DeadWalk;
+    line-height: 50px;
+    margin-top: 4rem;
+    z-index: 1;
 }
+
 .gametitle {
-    font-size: 128px;
-    padding-bottom:40px;
+    font-size: clamp(48px, 10vw, 128px);
+    padding-bottom: 40px;
     letter-spacing: 8px;
     text-shadow: 2px 2px 5px #be3144;
-    -webkit-box-reflect: below -55px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    -webkit-box-reflect: below -35px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    user-select: none;
 }
 .gamedetail {
-    margin-top:25%;
-    font-size: 36px;
+    font-size: clamp(18px, 2.5vw, 36px);
+    padding: 40px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    user-select: none;
+
 }
 
 .landing {
@@ -179,28 +203,57 @@ body{
     font-size: 24px;
 }
 .steampage {
+    padding: 10px 20px;
+    text-decoration: none;
+    animation: floatin 1s ease-out forwards, wiggle 4s linear infinite;
+    animation-delay: 2s;
+    max-width: 100%;
+    width:fit-content;
+    text-align:center;
+    box-sizing: border-box;
+    user-select: none;
     opacity: 0%;
-    -webkit-border-radius: 11;
-    -moz-border-radius: 11;
-    border-radius: 11px;
-    -webkit-box-shadow: 0px 6px 5px #696969;
-    -moz-box-shadow: 0px 6px 5px #696969;
-    box-shadow: 0px 6px 5px #696969;
+    border-radius: 8px;
     color: #be3144;
     font-family: DeadWalk;
-    font-size: 20px;
-    background: #3a4750;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-    animation: floatin 1s ease-out forwards,
-    wiggle 2s linear infinite;
-    animation-delay:2s;
+    font-size: clamp(12px, 1.2vw, 20px);
+    background-image: radial-gradient(circle, #406b61, #3b645b, #375e55, #325750, #2e514a, #2b4d45, #294841, #26443c, #244038, #233c34, #213831, #1f342d);
+    border:none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  transition: ease .3;
 }
-.steampage:hover {
-    opacity:75%;
-    animation-play-state:paused;
-    border: 3px inset #3a4750;
-}
+.steampage:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+     background-color: #97b1aa;
+  
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  .steampage:hover {
+    color:#39625A;
+
+  }
+  .steampage:hover:after {
+    top: 0;
+    height: 100%;
+  }
+  .steampage:active {
+    top: 2px;
+  }
 @keyframes floatin {
     0%{transform: translateY(100%);opacity:0;}
     100%{transform:translateY(0%);opacity:1;}
@@ -212,52 +265,9 @@ body{
     50% {rotate:5deg;scale:1.5;}
     75% {rotate:-5deg;scale:1.25;}
     85%{rotate:5deg;}
-    100%{rotate:-5deg;}
+    100%{rotate:0deg;}
 }
 
-
-.faq-list {
-    list-style-type: none;
-    padding: 20px;
-    background-color: rgba(48, 56, 65, .5);
-    
-  }
-.faq-item {
-    padding:20px;
-    margin:30px auto;
-    max-width:800px;
-    
-  }
-  .faq-question, .fa-ellipsis-h, .faq-header {
-    display:inline-block;
-    margin: 0 auto;
-    width: 100%;
-    background: none;
-    color: #be3144;
-    font-family: DeadWalk;
-    font-size: 28px;
-    padding-top:20px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    padding-bottom:25px;
-  }
-  .faq-question {
-    border: 8px outset #3a4750;
-    box-shadow: 10px 10px 8px black;
-  }
-
-  .faq-answer {
-    display: block;
-    padding: 20px;
-    color: #ffffff;
-    font-size: 18px;
-    font-family: sans-serif;
-    border: 4px inset #3a4750;
-    text-align:center;
-    font-style: italic;
-    opacity: 65%;
-  }
   .hidden {
     display: none;
   }
@@ -274,24 +284,6 @@ body{
     padding-right:50px;
     opacity:0%;
   }
-  .faq-header {
-    text-align: center;
-    margin:auto;
-    cursor:default;
-    border: 6px outset #3a4750;
-    box-shadow: 10px 10px 8px black;
-  }
-  .header-text {
-    letter-spacing: 10px;
-
-  }
-  .faq-headline {
-    width:80%;
-    margin:10px auto;
-    border:5px outset snow;
-    opacity: .5;
-    margin-top:25px;
-  }
   .trailer-container {
     display:flex;
     justify-content: center;
@@ -301,6 +293,49 @@ body{
     border: 10px outset #303841;
     width:720px;
     height:360px;
+    box-shadow: 
+        -10px -10px 20px rgba(255, 255, 255, 0.25), /* Faded white light in the top-left */
+        10px 10px 30px rgba(0, 0, 0, 0.9);  
   }
-
-  
+.footersocialcontainer{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+hr.page-margin {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+    width:75%;
+    margin: 25px auto;
+    
+}
+.game-content-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .content-info {
+    background-color: var(--main-color);
+  color: #be3144;
+  font-family: DeadWalk;
+  border: 6px inset var(--border-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(18px, 2vw, 24px);
+  text-align: center;
+  min-height: 250px;
+  box-sizing: border-box;
+  box-shadow: 
+    inset -10px -10px 20px rgba(255, 255, 255, 0.25),
+    inset 10px 10px 30px rgba(0, 0, 0, 0.9);  
+  }
