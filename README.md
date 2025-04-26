@@ -1,3 +1,5 @@
+# Milo Landing Page
+
 - Fan made landing page for video game 'Milo'
 
 - Made with HTML and CSS
